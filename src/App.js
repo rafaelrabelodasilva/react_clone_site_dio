@@ -1,5 +1,8 @@
 import { Home } from './pages/home'
 import { Login } from './pages/login'
+import { Feed } from './pages/feed'
+import { Teste } from './pages/exemplo_hooks'
+import { SignIn } from './pages/signIn'
 
 import {
   BrowserRouter as Router,
@@ -13,6 +16,9 @@ function App() {
       <Routes>
         <Route path='/' element={ <Home /> }/>
         <Route path='/login' element={ <Login /> }/>
+        <Route path='/feed' element={ <Feed /> }/>
+        <Route path='/teste' element={ <Teste /> }/>
+        <Route path='/signin' element={ <SignIn /> }/>
       </Routes>
     </Router>
   );

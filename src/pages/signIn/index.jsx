@@ -1,6 +1,8 @@
 import { useNavigate } from 'react-router-dom'
 import { useForm } from "react-hook-form"
 import { MdEmail, MdLock } from 'react-icons/md'
+import { FaUser } from 'react-icons/fa';
+
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from "yup"
 
@@ -10,9 +12,9 @@ import { Input } from '../../components/Input'
 import {
     Column,
     Container,
-    CriarText,
-    EsqueciText,
-    Row,
+    TextSameLine,
+    NormalText,
+    SmallText,
     SubTitleLogin,
     Title,
     TitleLogin,
@@ -22,11 +24,12 @@ import {
 import { api } from '../../services/api'
 
 const schema = yup.object({
+    fullName: yup.string().required('Campo obrigatório'),
     email: yup.string().email('E-mail não é valido').required('Campo obrigatório'),
     password: yup.string().min(3, 'No mínimo 3 caracteres').required('Campo obrigatório'),
 }).required();
 
-const Login = () => {
+const SignIn = () => {
     const navigate = useNavigate()
 
     const {
@@ -64,28 +67,30 @@ const Login = () => {
             <Column>
                 <Wrapper>
                     <TitleLogin>
-                        Faça seu cadastro
+                        Comece agora grátis
                     </TitleLogin>
                     <SubTitleLogin>
-                        Faça seu login e make the change._
+                        Crie sua conta e make the change._
                     </SubTitleLogin>
                     <form onSubmit={handleSubmit(onSubmit)}>
+                        <Input name="fullName" errorMessage={errors?.fullName?.message} control={control} placeholder="Nome completo" leftIcon={<FaUser />} />
                         <Input name="email" errorMessage={errors?.email?.message} control={control} placeholder="E-mail" leftIcon={<MdEmail />} />
                         <Input name="password" errorMessage={errors?.password?.message} control={control} placeholder="Senha" type="password" leftIcon={<MdLock />} />
-                        <Button title="Entrar" type="submit" variant='secondary' />
+                        <Button title="Criar minha conta" type="submit" variant='secondary' />
                     </form>
-                    <Row>
-                        <EsqueciText>
-                            Esqueci minha senha
-                        </EsqueciText>
-                        <CriarText>
-                            Criar conta
-                        </CriarText>
-                    </Row>
+                    <Column>
+                        <NormalText>
+                        Ao clicar em "criar minha conta grátis", declaro que aceito as Políticas de Privacidade e os Termos de Uso da DIO.
+                        </NormalText>
+                    </Column>
+                    <TextSameLine>
+                        <SmallText variant='primary'>Já tenho conta.</SmallText>
+                        <SmallText variant='secondary'>Fazer login.</SmallText>
+                    </TextSameLine>
                 </Wrapper>
             </Column>
         </Container></>
     )
 }
 
-export { Login }
+export { SignIn }

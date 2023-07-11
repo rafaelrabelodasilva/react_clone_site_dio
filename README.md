@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# O Projeto ✨
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto foi desenvolvido como atividade do curso **Formação React Developer** da plataforma DIO. O objetivo do projeto foi criar páginas com roteamentos, criar componentes em React e utilizar o styled-components para estilização. A extensão dos arquivos utilizados no projeto é JSX, que é uma extensão usada para arquivos JavaScript que contêm código em XML.
 
-## Available Scripts
+## Telas
 
-In the project directory, you can run:
+### Home
 
-### `npm start`
+Na página inicial, o usuário pode visualizar uma mensagem do site juntamente com uma foto ilustrativa. Abaixo da mensagem, há um botão que leva o usuário para a tela de login.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Rota: `http://localhost:3000/`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![gif](./src/assets/pagina_home.gif "Exibindo tela home")
 
-### `npm test`
+### Página de Login
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Nesta tela, o usuário pode informar os dados contidos no arquivo "db.json" para acessar a tela de feed. Caso as informações de login estejam incorretas, uma mensagem de erro será abaixo do input. O roteamento da aplicação foi feito utilizando a biblioteca react-router-dom.
 
-### `npm run build`
+Rota: `http://localhost:3000/login`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![gif](./src/assets/pagina_login.gif "Exibindo tela login")
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Página de Cadastro
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Essa tela é apenas uma representação estática, onde o usuário precisa informar seus dados e submeter o formulário para realizar o cadastro. A funcionalidade de cadastro em si não foi implementada.
 
-### `npm run eject`
+Rota: `http://localhost:3000/signin`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![gif](./src/assets/pagina_cadastro.gif "Exibindo tela de cadastro")
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Feed
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Nesta tela, o usuário tem acesso a um feed de publicações, todas elas codificadas diretamente no código, pois não há integração com um banco de dados. Além disso, é possível visualizar um ranking semanal fictício, que é atualizado de acordo com os valores informados no componente `<UserInfo percentual={80}>`.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Rota: `http://localhost:3000/feed`
 
-## Learn More
+![gif](./src/assets/pagina_feed.gif "Exibindo feed")
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Como executar o projeto 🧙‍♂️
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Certifique-se de ter as seguintes dependências instaladas antes de prosseguir:
 
-### Code Splitting
+- Node.js (versão 18.15.0)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Clone este repositório
+2. Instale as dependências usando o comando `npm install` ou `yarn install`
+3. Execute o comando `npm start` ou `yarn start` para iniciar o aplicativo
+4. Acesse o aplicativo em seu navegador através da URL `http://localhost:3000`
 
-### Analyzing the Bundle Size
+## Dependências ⚙️
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **@hookform/resolvers**: Biblioteca de resolução de formulários para o React Hook Form.
+- **@testing-library/jest-dom**: Biblioteca de extensões para testes com o Jest.
+- **@testing-library/react**: Biblioteca para testes de componentes React.
+- **@testing-library/user-event**: Biblioteca que fornece uma API de eventos de usuário para testes de componentes React.
+- **axios**: Biblioteca para fazer requisições HTTP.
+- **react**: Biblioteca principal do React.
+- **react-dom**: Pacote de integração do React para manipulação do DOM.
+- **react-hook-form**: Biblioteca para lidar com formulários no React.
+- **react-icons**: Biblioteca de ícones para React.
+- **react-router-dom**: Biblioteca para roteamento no React.
+- **react-scripts**: Conjunto de scripts para desenvolvimento e construção de aplicativos React.
+- **styled-components**: Biblioteca para estilização de componentes React usando CSS no JavaScript.
+- **web-vitals**: Biblioteca para medir e relatar as métricas de desempenho da web.
+- **yup**: Biblioteca para validação de esquemas.
 
-### Making a Progressive Web App
+Espero que essas informações sejam úteis para entender e utilizar o projeto finalizado.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Contato 👨‍💻
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Para mais informações, entre em contato pelo meu [LinkedIn](https://www.linkedin.com/in/rafaelrabelodasilva/)
