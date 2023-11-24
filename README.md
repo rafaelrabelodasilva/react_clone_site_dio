@@ -64,8 +64,6 @@ Certifique-se de ter as seguintes dependências instaladas antes de prosseguir:
 - **web-vitals**: Biblioteca para medir e relatar as métricas de desempenho da web.
 - **yup**: Biblioteca para validação de esquemas.
 
-Espero que essas informações sejam úteis para entender e utilizar o projeto finalizado.
-
 ## Contato 👨‍💻
 
 Para mais informações, entre em contato pelo meu [LinkedIn](https://www.linkedin.com/in/rafaelrabelodasilva/)
